@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "YYDj69GqXnxCcfhmyb3m8N8HI7UY9a57hwCqMwDtlURIUm8mm/PAekWSoWktLOB4hbZPcZXrCs/RxZcreu0LXg==",
+  "dgSpecHash": "J5NYSTo+dEXh07CowRD3it8RLnRoj0GWGnAx0cU+4VwOpxno6euPi3Eh219vt5YrTpfzHAuXhtJ5/iReYS4cRg==",
   "success": true,
   "projectFilePath": "C:\\proyectos\\TestApp.MVC\\TestApp.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\FernandR\\.nuget\\packages\\auth0.aspnetcore.authentication\\1.1.0\\auth0.aspnetcore.authentication.1.1.0.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\FernandR\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\7.0.2\\microsoft.aspnetcore.authentication.openidconnect.7.0.2.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\FernandR\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

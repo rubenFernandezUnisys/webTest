@@ -1,3 +1,4 @@
+using Auth0.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using TestApp.MVC.Data;
 
@@ -6,6 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 var conn = builder.Configuration.GetConnectionString("ManagementDbConnection");
 builder.Services.AddDbContext<ManagementDbContext>(q => q.UseSqlServer(conn));
 // Add services to the container.
+builder.Services
+        .AddAuth0WebAppAuthentication(options => {
+            options.Domain = builder.Configuration["Auth0:Domain"];
+            options.ClientId = builder.Configuration["Auth0:ClientId"];
+        });
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -23,6 +29,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
