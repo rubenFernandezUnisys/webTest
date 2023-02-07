@@ -21,7 +21,7 @@ namespace TestApp.MVC.Controllers
         // GET: Oficina
         public async Task<IActionResult> Index()
         {
-              return _context.Oficinas != null ? 
+              return _context.Oficinas != null ?
                           View(await _context.Oficinas.ToListAsync()) :
                           Problem("Entity set 'ManagementDbContext.Oficinas'  is null.");
         }

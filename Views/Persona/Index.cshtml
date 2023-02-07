@@ -4,11 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Índice Clientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-outline-light" style="background-color: white; color: black" asp-action="Create"><b>Nuevo</b></a>
 </p>
+<input id="myInput" type="text" placeholder="Buscar...">
+<br>
+<br>
 <table class="table">
     <thead>
         <tr>
@@ -37,11 +40,57 @@
                 @Html.DisplayFor(modelItem => item.FechaNacimiento)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn" style="color: white" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn" style="color: white" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a class="btn" style="color: white" asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<form asp-action="Delete" id="personaDeleteForm">
+    <input type="hidden" id="personaId" name="Id" />
+
+</form>
+
+            @section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $(".table tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('.deleteBtn').click(function (e) {
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡Estos cambios no son reversibles!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, bórralo!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            '¡Borrado!',
+                            'Tu archivo ha sido borrado con éxito.',
+                            'Éxito'
+                        )
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#personaId').val(id);
+                        $('#personaDeleteForm').submit();
+                    }
+                })
+            })
+        })
+    </script>
+            }

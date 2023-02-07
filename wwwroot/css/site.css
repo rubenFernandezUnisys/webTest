@@ -1,9 +1,13 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+hola {
+    color: white;
 }
 
 @media (min-width: 768px) {
-  html {
+    html {
     font-size: 16px;
   }
 }
@@ -33,6 +37,15 @@ h1 {
 h2 {
     color: white;
 }
+
+span {
+    color: white;
+}
+
+p    {
+    color: white;
+}
+
 h3 {
     color: white;
 }
@@ -75,6 +88,18 @@ html {
   min-height: 100%;
 }
 
+.table {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    opacity: 0.95;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#myInput {
+    border-radius: 15px;
+    border: none;
+}
 body {
     margin-bottom: 60px;
     background: linear-gradient(45deg, #49a09d, #5f2c82);
@@ -322,3 +347,5 @@ nav ul ul li {
 }	
 li > a:after { content:  ' ▼'; }
 li > a:only-child:after { content: ''; }
+
+
