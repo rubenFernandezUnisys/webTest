@@ -1,6 +1,9 @@
 using Auth0.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using TestApp.MVC.Data;
+using TestApp.MVC.Hubs;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,8 @@ builder.Services
             options.Domain = builder.Configuration["Auth0:Domain"];
             options.ClientId = builder.Configuration["Auth0:ClientId"];
         });
+builder.Services.AddSignalR();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -31,6 +36,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapHub<ChatHub>("/chatHub");
 
 app.MapControllerRoute(
     name: "default",
