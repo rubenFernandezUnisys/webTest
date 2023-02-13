@@ -1,18 +1,23 @@
 ﻿@page
 <div class="container">
     <div class="row">
+              <div class="cold-md-6">
+                <h3>Mensajes:</h3>
+                <ul style="height: 250px" id="list" class="alert alert-info"></ul>
+            </div>
             <div class="col-md-6">
                 <span>Nombre:</span></br>
-                <input type="text" id="txtUser"/></br>
-           <span> Message:</span></br>
-                <textarea rows="10" cols="50" id="txtMsg"></textarea></br>
-                <button type="submit" class="btn btn-info" id="btnSend"></button>
+            <input style="background-color:#cff4fc; border: none; border-radius:5px" type="text" id="txtUser" /></br>
+            <div id="txtArea">
+                <span> Mensaje:</span></br>
+                <textarea style="background-color:#cff4fc; border: none; border-radius:5px" rows="2" cols="100" id="txtMsg"></textarea></br>
+               <div id="buttons">
+                    <button style="color:white" type="submit" class="btn btn-info" id="btnSend">Enviar</button>
+               </div>
             </div>
-            <div class="cold-md-6">
-                <h3>Mensajes:</h3>
-                <ul id="list" class="alert alert-info"></ul>
             </div>
-    </div>
+
+            
   
 </div>
 <script href="~/lib/jquery/dist/jquery.min.map"></script>

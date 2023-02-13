@@ -354,4 +354,8 @@ nav ul ul li {
 li > a:after { content:  ' ▼'; }
 li > a:only-child:after { content: ''; }
 
+#txtArea, #buttons {
+    display: inline-block;
+    vertical-align: top;
+}
 
