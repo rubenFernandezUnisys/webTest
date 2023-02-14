@@ -1,10 +1,10 @@
 ﻿<div class="row">
     <div class="col-md-8 offset-2">
-        <h2>Salas de Chat</h2>
+        <h2 style="text-align:center">Foros Disponibles</h2><br />
         <ul class="list-group">
             @foreach (var e in TestApp.MVC.Controllers.ChatsController.Rooms)
                 {
-                    <li class="list-group-item"><a href="~/Chats/Room?room=@e.Key">@e.Value</a></li>
+                <li id="heylista" class="list-group-item"><a id="chat-menu" href="~/Chats/Room?room=@e.Key"><b>@e.Value</b></a></li>
                 }
         </ul>
     </div>

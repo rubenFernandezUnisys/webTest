@@ -1,25 +1,29 @@
 ﻿@model int
 
-<h1>@TestApp.MVC.Controllers.ChatsController.Rooms.GetValueOrDefault(Model)</h1>
+<h1 style="text-align:center">@TestApp.MVC.Controllers.ChatsController.Rooms.GetValueOrDefault(Model)</h1>
+
+<input style="width: 200px;" type="text" placeholder="Usuario" id="user" />
+
+<section class="hideScroll">
+<div id="div-msg">
+    <br/>
+    <ul style="height:300px" id="messages" class="alert alert-info"></ul>
+   
+</div>
+        
+
 <div class="row">
     <div class="col-12">
-        <br/>
-        <input style="width: 200px;" type="text" placeholder="Usuario" id="user" /><br /><br />
-        <input style="width: 1000px;" type="text" placeholder="Mensaje" id="message" />
-        <button class="btn-send" id="btnSend">Enviar</button>
-    </div>  
 
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div id="messages"></div>
-    </div>
-    <div class="col-6">
-        <div id="notifications"></div>
+            <input style="width: 1000px;" type="text" placeholder="Mensaje" id="message" />
+            <button class="btn-send" id="btnSend"><b>Enviar</b></button>
     </div>
 
-</div>
+    </div><br /><br /><br />
+
+
+
+</section>
 
 <script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
