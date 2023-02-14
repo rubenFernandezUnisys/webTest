@@ -10,7 +10,7 @@
 
 .btn-send {
     color: white;
-    border-radius: 50px;
+    border-radius: 10px;
     height: 40px;
     width: 100px;
     border-color: white;
@@ -18,7 +18,7 @@
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
 }
 #user {
-    border-radius: 50px;
+    border-radius: 10px;
     border-color: white;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
@@ -424,4 +424,11 @@ div {
 #chat-menu {
     color: white;
     text-decoration:none;
+}
+
+#messages {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
+    height: 300px;
+    border: none;
 }

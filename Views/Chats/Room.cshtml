@@ -2,12 +2,12 @@
 
 <h1 style="text-align:center">@TestApp.MVC.Controllers.ChatsController.Rooms.GetValueOrDefault(Model)</h1>
 
-<input style="width: 200px;" type="text" placeholder="Usuario" id="user" />
+<input style="width: 200px;" type="text" placeholder="Usuario" id="user" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
 
 <section class="hideScroll">
 <div id="div-msg">
     <br/>
-    <ul style="height:300px" id="messages" class="alert alert-info"></ul>
+        <div id="messages" class="alert alert-primary"></div>
    
 </div>
         
@@ -15,7 +15,8 @@
 <div class="row">
     <div class="col-12">
 
-            <input style="width: 1000px;" type="text" placeholder="Mensaje" id="message" />
+            <input style="width: 1000px;" type="text" placeholder="Mensaje" id="message" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
+            
             <button class="btn-send" id="btnSend"><b>Enviar</b></button>
     </div>
 
@@ -47,7 +48,7 @@
      })
 
      connection.on("ReceiveMessage", (user, message) =>{
-        var message = "<div><b>" + user + " dijo: </b> " + message + "</div>";
+        var message = "<div><b>" + user + " -> </b> " + message + "</div>";
         document.getElementById("messages").innerHTML = 
         message + document.getElementById("messages").innerHTML;
      });
