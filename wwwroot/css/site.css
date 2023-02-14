@@ -1,12 +1,37 @@
-﻿html {
+﻿#message {
+    border-radius: 50px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
+    padding: 20px;
+    border-color: white;
+    width: 200px;
+    height: 40px;
+}
+
+.btn-send {
+    color: #1a1a1a;
+    border-radius: 50px;
+    height: 40px;
+    width: 100px;
+    border-color: white;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
+}
+#user {
+    border-radius: 50px;
+    border-color: white;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(71,148,233,1) 28%, rgba(46,129,251,1) 59%, rgba(151,255,249,1) 100%);
+    padding: 20px;
+    width: 200px;
+    height: 15px;
+}
+
+html {
     font-size: 14px;
 }
 
-#holaa {
-    background: linear-gradient(45deg, #49a09d, #5f2c82);
-    color: white;
-    border: none;
-}
+
 
 h5 {
     color:white;
@@ -354,8 +379,15 @@ nav ul ul li {
 li > a:after { content:  ' ▼'; }
 li > a:only-child:after { content: ''; }
 
-#txtArea, #buttons {
-    display: inline-block;
-    vertical-align: top;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #404040;
+    opacity: 1; /* Firefox */
 }
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #1a1a1a;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #1a1a1a;
+}
