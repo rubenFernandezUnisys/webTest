@@ -4,7 +4,7 @@
         <ul class="list-group">
             @foreach (var e in TestApp.MVC.Controllers.ChatsController.Rooms)
                 {
-                <li id="heylista" class="list-group-item"><a id="chat-menu" href="~/Chats/Room?room=@e.Key"><b>@e.Value</b></a></li>
+                <li id="heylista" class="list-group-item lista-chats"><a id="chat-menu" href="~/Chats/Room?room=@e.Key"><b>@e.Value</b></a></li>
                 }
         </ul>
     </div>

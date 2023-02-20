@@ -2,12 +2,12 @@
 
 <h1 style="text-align:center">@TestApp.MVC.Controllers.ChatsController.Rooms.GetValueOrDefault(Model)</h1>
 
-<input style="width: 200px;" type="text" placeholder="Usuario" id="user" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
+<input class="lista-chats" style="width: 200px;" type="text" placeholder="Usuario" id="user" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
 
 <section class="hideScroll">
 <div id="div-msg">
     <br/>
-        <div id="messages" class="alert alert-primary"></div>
+        <div id="messages" class="alert alert-primary lista-chats" style="word-break:break-word"></div>
    
 </div>
         
@@ -15,9 +15,9 @@
 <div class="row">
     <div class="col-12">
 
-            <input style="width: 1000px;" type="text" placeholder="Mensaje" id="message" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
+            <input class="lista-chats" style="width: 1000px;" type="text" placeholder="Mensaje" id="message" onkeypress="return ((event.charCode != 60 && event.charCode != 62))" />
             
-            <button class="btn-send" id="btnSend"><b>Enviar</b></button>
+            <button class="btn-send lista-chats" id="btnSend"><b>Enviar</b></button>
     </div>
 
     </div><br /><br /><br />
