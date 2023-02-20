@@ -1,4 +1,7 @@
-﻿var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+﻿<script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+
+var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
 connection.on("ReceiveMessage", function (fromUser, message) {
     var msg = fromUser + ": " + message;
@@ -21,3 +24,4 @@ toggle.addEventListener('change', (event) => {
     let checked = event.target.checked;
     document.body.classList.toggle('dark');
 });
+
