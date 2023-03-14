@@ -9,6 +9,19 @@ namespace TestApp.MVC.Hubs
             await Clients.Group(room).SendAsync("ReceiveMessage", fromUser, message);
         }
 
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseRouting();
+            app.UseFileServer();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<ChatHub>("/chat");
+            });
+        }
+        public Task Echo(string name, string message) =>
+            Clients.Client(Context.ConnectionId)
+                   .SendAsync("echo", name, $"{message} (echo from server)");
+
         public async Task AddToGroup(string room)
         {
             await Groups.AddToGroupAsync(Context.ConnectionId, room);
